@@ -230,6 +230,27 @@ function injectComponents() {
   } else {
     console.warn("Footer placeholder not found in DOM");
   }
+
+  initFAQ();
+}
+
+/* ===== FAQ ACCORDION ===== */
+function initFAQ() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(q => {
+    q.onclick = () => {
+      const item = q.parentElement;
+      const isActive = item.classList.contains('active');
+
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+      // If the clicked item wasn't active, open it
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    };
+  });
 }
 
 // Use a safer initialization
