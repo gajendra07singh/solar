@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Program – SHRI SOLAR</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-breadcrumb">
+      <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Vendor Program</span>
+    </div>
+    <div class="hero-badge">
+      <i class="fas fa-truck-moving"></i> Supply Chain
+    </div>
+    <h1 class="hero-title">Grow Your Business <span>As Our Vendor</span></h1>
+    <p class="hero-desc">We are expanding our network across India. Partner with Shri Solar as a vendor or supplier to provide high-quality components and services for our nationwide solar projects.</p>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <aside class="sidebar">
+    <div class="toc-card">
+      <div class="toc-head">
+        <h3><i class="fas fa-truck"></i> Vendor Menu</h3>
+      </div>
+      <ul class="toc-list">
+        <li><a href="#collaboration" class="active"><i class="fas fa-handshake"></i> Collaboration</a></li>
+        <li><a href="#requirements"><i class="fas fa-list-check"></i> Requirements</a></li>
+        <li><a href="#registration"><i class="fas fa-file-signature"></i> Registration</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Become a Partner</h4>
+      <p>Join our authorized network</p>
+      <a href="tel:+919266386005" class="cta-btn">
+        CALL NOW <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <div class="content-col">
+
+    <section id="collaboration">
+      <div class="office-title">
+        <h2>Vendor <em>Collaboration</em></h2>
+        <p>Integrity, quality, and reliability are the cornerstones of our supply chain.</p>
+      </div>
+
+      <div class="highlight-box">
+        <p>Shri Solar is looking for vendors who can support our mission of providing affordable solar energy. We value long-term relationships built on mutual growth.</p>
+      </div>
+    </section>
+
+    <section id="requirements">
+      <div class="simple-grid">
+        <div class="grid-item">
+          <h4>Vendor Requirements</h4>
+          <ul class="info-list">
+            <li>Indian citizenship & 18+ years of age</li>
+            <li>GST Registration & valid PAN</li>
+            <li>Commitment to product quality & timelines</li>
+            <li>Adherence to "No Cash Transaction" policy</li>
+            <li>Security deposit of ₹10,000 (Refundable)</li>
+          </ul>
+        </div>
+        <div class="grid-item">
+          <h4>Supply Categories</h4>
+          <ul class="info-list">
+            <li>Solar PV Modules & Inverters</li>
+            <li>Mounting Structures & Hardware</li>
+            <li>Electrical Cables & Balance of System</li>
+            <li>Installation & Commissioning Services</li>
+            <li>Operations & Maintenance support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="registration" class="vendor-form-section">
+      <div class="office-title">
+        <h2>Vendor <em>Registration Form</em></h2>
+        <p>Register your company with Shri Solar to join our authorized supplier network.</p>
+      </div>
+
+      <form class="professional-form">
+        <div class="form-section-title">Point of Contact</div>
+        <div class="form-row">
+          <div class="form-group icon-input">
+            <label for="v-name" class="sr-only">Contact Person Name</label>
+            <i class="fas fa-user"></i>
+            <input type="text" id="v-name" placeholder="Contact Person Name" required>
+          </div>
+          <div class="form-group icon-input">
+            <label for="v-phone" class="sr-only">Phone Number</label>
+            <i class="fas fa-phone-alt"></i>
+            <input type="tel" id="v-phone" placeholder="Phone Number" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group icon-input">
+            <label for="v-email" class="sr-only">Email Address</label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="v-email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group icon-input">
+            <label for="v-city" class="sr-only">City / State</label>
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" id="v-city" placeholder="City / State" required>
+          </div>
+        </div>
+
+        <div class="form-section-title">Business Information</div>
+        <div class="form-row">
+          <div class="form-group icon-input">
+            <label for="v-company" class="sr-only">Company Name</label>
+            <i class="fas fa-building"></i>
+            <input type="text" id="v-company" placeholder="Company Name" required>
+          </div>
+          <div class="form-group">
+            <label for="v-category" class="sr-only">Supply Category</label>
+            <select id="v-category" required>
+              <option value="" disabled selected>Supply Category</option>
+              <option value="modules">Solar Modules</option>
+              <option value="inverters">Inverters</option>
+              <option value="structures">Mounting Structures</option>
+              <option value="electrical">Electrical / BOS</option>
+              <option value="services">Installation Services</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group icon-input">
+            <label for="v-gst" class="sr-only">GST Number</label>
+            <i class="fas fa-file-invoice"></i>
+            <input type="text" id="v-gst" placeholder="GST Number (Optional)">
+          </div>
+          <div class="form-group icon-input">
+            <label for="v-pan" class="sr-only">PAN Number</label>
+            <i class="fas fa-id-card"></i>
+            <input type="text" id="v-pan" placeholder="PAN Number (Optional)">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="v-msg" style="font-size: 0.85rem; color: var(--muted); font-weight: 600;">Tell us about your products/services</label>
+          <textarea id="v-msg" rows="4" placeholder="Briefly describe your company's expertise and track record..."></textarea>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="v-terms" required>
+          <label for="v-terms">I confirm that all provided information is accurate and I agree to the <a href="#">Vendor Terms</a>.</label>
+        </div>
+
+        <button type="submit" class="submit-btn-modern">
+          Submit Registration <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </section>
+
+  </div>
+</div>
+
+<!-- ===== CTA BANNER SECTION ===== -->
+<section class="cta-banner-section">
+  <div class="cta-banner-inner container">
+    <div class="cta-banner-text">
+      <h3 class="banner-title">India's Leading Integrated Solar Company</h3>
+      <p class="banner-subtitle">Get a free solar consultation — enter your mobile number</p>
+    </div>
+    <div class="cta-banner-form">
+      <input type="tel" id="mobile-banner" placeholder="Enter Mobile Number" maxlength="10">
+      <button onclick="submitMobileBanner()"><i class="fas fa-paper-plane"></i> Get Quote</button>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

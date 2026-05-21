@@ -1,0 +1,422 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications & Awards – Shri Solar</title>
+  <meta name="description" content="View Shri Solar's official certifications, ISO awards, and government accreditations. We are dedicated to the highest quality and safety standards in solar energy.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --clr-green: #16a34a;
+      --clr-blue: #2563eb;
+      --clr-gold: #d97706;
+      --clr-orange: #ea580c;
+      --clr-red: #dc2626;
+      --clr-indigo: #4f46e5;
+    }
+
+    .page-body {
+      background: #f8fafc;
+      padding: 60px 0 !important;
+    }
+
+    .certs-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .certs-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .certs-title span { color: var(--green); }
+
+    .title-flourish {
+      width: 120px;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 30px;
+      border-radius: 10px;
+    }
+
+    .certs-intro {
+      max-width: 800px;
+      margin: 0 auto 60px;
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--muted);
+      line-height: 1.8;
+      font-weight: 500;
+    }
+
+    /* 4 Column Grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    /* Colorful Card Design */
+    .award-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px 15px;
+      border: 2px solid transparent;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px -12px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Color Themes */
+    .card-green:hover { border-color: var(--clr-green); box-shadow: 0 20px 40px rgba(22, 163, 74, 0.15); }
+    .card-blue:hover  { border-color: var(--clr-blue);  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15); }
+    .card-gold:hover  { border-color: var(--clr-gold);  box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15); }
+    .card-orange:hover{ border-color: var(--clr-orange);box-shadow: 0 20px 40px rgba(234, 88, 12, 0.15); }
+    .card-red:hover   { border-color: var(--clr-red);   box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15); }
+    .card-indigo:hover{ border-color: var(--clr-indigo);box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15); }
+
+    /* Icon Box Variants */
+    .award-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 1.8rem;
+      transition: all 0.4s ease;
+    }
+
+    .card-green .award-icon { background: #f0fdf4; color: var(--clr-green); }
+    .card-blue .award-icon  { background: #eff6ff; color: var(--clr-blue); }
+    .card-gold .award-icon  { background: #fffbeb; color: var(--clr-gold); }
+    .card-orange .award-icon{ background: #fff7ed; color: var(--clr-orange); }
+    .card-red .award-icon   { background: #fef2f2; color: var(--clr-red); }
+    .card-indigo .award-icon{ background: #eef2ff; color: var(--clr-indigo); }
+
+    .award-card:hover .award-icon {
+      transform: scale(1.1) rotate(-8deg);
+      color: #fff;
+    }
+    .card-green:hover .award-icon { background: var(--clr-green); }
+    .card-blue:hover .award-icon  { background: var(--clr-blue); }
+    .card-gold:hover .award-icon  { background: var(--clr-gold); }
+    .card-orange:hover .award-icon { background: var(--clr-orange); }
+    .card-red:hover .award-icon   { background: var(--clr-red); }
+    .card-indigo:hover .award-icon { background: var(--clr-indigo); }
+
+    .award-card h4 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 8px;
+      font-weight: 800;
+    }
+
+    .card-divider {
+      width: 30px;
+      height: 3px;
+      margin: 0 auto 12px;
+      border-radius: 5px;
+      transition: width 0.3s ease;
+    }
+    .card-green .card-divider { background: var(--clr-green); }
+    .card-blue .card-divider  { background: var(--clr-blue); }
+    .card-gold .card-divider  { background: var(--clr-gold); }
+    .card-orange .card-divider{ background: var(--clr-orange); }
+    .card-red .card-divider   { background: var(--clr-red); }
+    .card-indigo .card-divider{ background: var(--clr-indigo); }
+
+    .award-card:hover .card-divider { width: 70px; }
+
+    .award-card p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .btn-download {
+      margin-top: auto;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      justify-content: center;
+      background: #f1f5f9;
+      color: var(--navy);
+    }
+
+    .award-card:hover .btn-download {
+      color: #fff;
+    }
+    .card-green:hover .btn-download { background: var(--clr-green); }
+    .card-blue:hover .btn-download  { background: var(--clr-blue); }
+    .card-gold:hover .btn-download  { background: var(--clr-gold); }
+    .card-orange:hover .btn-download{ background: var(--clr-orange); }
+    .card-red:hover .btn-download   { background: var(--clr-red); }
+    .card-indigo:hover .btn-download { background: var(--clr-indigo); }
+
+    .hero-breadcrumb span { color: #fff; font-weight: 600; }
+
+    @media (max-width: 1100px) {
+      .certs-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }
+      .certs-intro { font-size: 1.05rem; }
+    }
+    @media (max-width: 768px) {
+      .certs-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .award-card { padding: 20px 12px; border-radius: 16px; }
+      .award-icon { width: 50px; height: 50px; font-size: 1.5rem; margin-bottom: 15px; }
+      .award-card h4 { font-size: 1rem; }
+      .award-card p { font-size: 0.75rem; margin-bottom: 15px; }
+      .btn-download { padding: 8px 12px; font-size: 0.68rem; }
+    }
+    @media (max-width: 480px) {
+      .certs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline preload="auto" class="hero-video" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-breadcrumb">
+      <a href="index.html">Home</a> <i class="fas fa-chevron-right" aria-hidden="true"></i> <span>Awards & Accreditations</span>
+    </div>
+    <div class="hero-badge">
+      <i class="fas fa-award" aria-hidden="true"></i> Quality & Excellence
+    </div>
+    <h1 class="hero-title">Shri Solar <span>Certifications & Awards</span></h1>
+    <p class="hero-desc">Dedicated to high-performance solar installations and sustainable development, Shri Solar maintains the highest national and international quality standards.</p>
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="page-body" style="display: block;"> <!-- Overriding grid to allow centered full width -->
+  <div class="certs-wrapper">
+    <h2 class="certs-title"><span>Shri</span> Solar Certifications & Awards</h2>
+    <div class="title-flourish"></div>
+    <p class="certs-intro">
+      Shri Solar is a trusted and ISO certified solar energy company committed to delivering high-performance solar panel installations and renewable energy solutions across India. Our certifications reflect our dedication to quality, safety, environmental responsibility, and long-term sustainable energy development.
+    </p>
+
+    <div class="certs-grid">
+      <!-- 1 -->
+      <div class="award-card card-green">
+        <div class="award-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+        <h4>ISO 9001-2015</h4>
+        <div class="card-divider"></div>
+        <p>Quality Management System</p>
+        <a href="../certificate/9001-2015.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 2 -->
+      <div class="award-card card-green">
+        <div class="award-icon"><i class="fas fa-leaf" aria-hidden="true"></i></div>
+        <h4>ISO 14001-2015</h4>
+        <div class="card-divider"></div>
+        <p>Environmental Management</p>
+        <a href="../certificate/14001-2015.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 3 -->
+      <div class="award-card card-green">
+        <div class="award-icon"><i class="fas fa-user-shield" aria-hidden="true"></i></div>
+        <h4>ISO 45001-2018</h4>
+        <div class="card-divider"></div>
+        <p>Occupational Safety</p>
+        <a href="../certificate/45001-2018.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 4 -->
+      <div class="award-card card-gold">
+        <div class="award-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+        <h4>ZED Bronze</h4>
+        <div class="card-divider"></div>
+        <p>Recognition Certificate</p>
+        <a href="../certificate/ZED Bronze CERTIFICATE.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 5 -->
+      <div class="award-card card-blue">
+        <div class="award-icon"><i class="fas fa-building" aria-hidden="true"></i></div>
+        <h4>UDYAM</h4>
+        <div class="card-divider"></div>
+        <p>MSME Registration</p>
+        <a href="../certificate/UDYAM CERTIFICATE.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 6 -->
+      <div class="award-card card-indigo">
+        <div class="award-icon"><i class="fas fa-registered" aria-hidden="true"></i></div>
+        <h4>Trademark</h4>
+        <div class="card-divider"></div>
+        <p>Registered Brand</p>
+        <a href="../certificate/TRADE MARK CERTIFICATE .pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 7 -->
+      <div class="award-card card-blue">
+        <div class="award-icon"><i class="fas fa-city" aria-hidden="true"></i></div>
+        <h4>GST NOIDA</h4>
+        <div class="card-divider"></div>
+        <p>Tax Registration (UP)</p>
+        <a href="../certificate/GST NOIDA.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 8 -->
+      <div class="award-card card-blue">
+        <div class="award-icon"><i class="fas fa-city" aria-hidden="true"></i></div>
+        <h4>GST MP</h4>
+        <div class="card-divider"></div>
+        <p>Tax Registration (MP)</p>
+        <a href="../certificate/GST MP.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 9 -->
+      <div class="award-card card-blue">
+        <div class="award-icon"><i class="fas fa-city" aria-hidden="true"></i></div>
+        <h4>GST UK</h4>
+        <div class="card-divider"></div>
+        <p>Tax Registration (UK)</p>
+        <a href="../certificate/GST DEHRADUN.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 10 -->
+      <div class="award-card card-indigo">
+        <div class="award-icon"><i class="fas fa-industry" aria-hidden="true"></i></div>
+        <h4>NSIC</h4>
+        <div class="card-divider"></div>
+        <p>National Industries Corp.</p>
+        <a href="../certificate/NSIC.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 11 -->
+      <div class="award-card card-orange">
+        <div class="award-icon"><i class="fas fa-file-contract" aria-hidden="true"></i></div>
+        <h4>MNRE Report 1</h4>
+        <div class="card-divider"></div>
+        <p>Solar Test Report (SSL)</p>
+        <a href="../certificate/MNRE TEST REPORT-SSL-12W.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 12 -->
+      <div class="award-card card-orange">
+        <div class="award-icon"><i class="fas fa-file-contract" aria-hidden="true"></i></div>
+        <h4>MNRE Report 2</h4>
+        <div class="card-divider"></div>
+        <p>Solar Test Report (SWHS)</p>
+        <a href="../certificate/MNRE TEST REPORT-SWHS-ETC.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 13 -->
+      <div class="award-card card-orange">
+        <div class="award-icon"><i class="fas fa-check-double" aria-hidden="true"></i></div>
+        <h4>BIS Inverter</h4>
+        <div class="card-divider"></div>
+        <p>Standards Compliance</p>
+        <a href="../certificate/BIS-INVERTER.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 14 -->
+      <div class="award-card card-red">
+        <div class="award-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+        <h4>Electrical License</h4>
+        <div class="card-divider"></div>
+        <p>State Authorized</p>
+        <a href="../certificate/Electrical License.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 15 -->
+      <div class="award-card card-red">
+        <div class="award-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+        <h4>Electrical A Class</h4>
+        <div class="card-divider"></div>
+        <p>Authorized A Class</p>
+        <a href="../certificate/Electrical License. A CLASS.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 16 -->
+      <div class="award-card card-indigo">
+        <div class="award-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+        <h4>EPF</h4>
+        <div class="card-divider"></div>
+        <p>Provident Fund Reg.</p>
+        <a href="../certificate/EPF.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 17 -->
+      <div class="award-card card-indigo">
+        <div class="award-icon"><i class="fas fa-hospital-user" aria-hidden="true"></i></div>
+        <h4>ESIC</h4>
+        <div class="card-divider"></div>
+        <p>Employee Insurance Reg.</p>
+        <a href="../certificate/ESIC.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 18 -->
+      <div class="award-card card-gold">
+        <div class="award-icon"><i class="fas fa-oil-can" aria-hidden="true"></i></div>
+        <h4>IOCL Vendor</h4>
+        <div class="card-divider"></div>
+        <p>Empanelled Vendor</p>
+        <a href="../certificate/IOCL Empanelled Vendors.pdf" download class="btn-download">Download Certificate</a>
+      </div>
+
+      <!-- 19 -->
+      <div class="award-card card-gold">
+        <div class="award-icon"><i class="fas fa-medal" aria-hidden="true"></i></div>
+        <h4>India 5000</h4>
+        <div class="card-divider"></div>
+        <p>Nomination Certificate</p>
+        <a href="../certificate/India5000_Nomination_Certificate.jpg" download class="btn-download">Download Certificate</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

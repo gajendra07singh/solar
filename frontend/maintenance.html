@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Maintenance – SHRI SOLAR</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .maintenance-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .maintenance-icon {
+      font-size: 4rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .maintenance-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+    .maintenance-text {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      transition: 0.3s;
+    }
+    .back-home:hover {
+      background: var(--green-mid);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- ===== PAGE BODY WRAPPER ===== -->
+<div class="page-body">
+
+  <aside class="sidebar">
+    <div class="toc-card">
+      <div class="toc-head">
+        <h3><i class="fas fa-tools"></i> Maintenance</h3>
+      </div>
+      <ul class="toc-list">
+        <li><a href="#" class="active"><i class="fas fa-info-circle"></i> Status Update</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Need Information?</h4>
+      <p>Contact our support team</p>
+      <a href="tel:+919266386005" class="cta-btn">
+        CALL NOW <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <div class="content-col">
+    <!-- ===== MAINTENANCE CONTENT ===== -->
+    <div class="maintenance-container">
+      <div class="maintenance-icon">
+        <i class="fas fa-tools"></i>
+      </div>
+      <h1 class="maintenance-title">Under Maintenance</h1>
+      <p class="maintenance-text">We're working hard to bring you a better experience. This page is currently under development and will be available soon. Thank you for your patience!</p>
+      <a href="index.html" class="back-home">
+        <i class="fas fa-home"></i> Back to Home
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CTA BANNER SECTION ===== -->
+<section class="cta-banner-section">
+  <div class="cta-banner-inner container">
+    <div class="cta-banner-text">
+      <h3 class="banner-title">India's Leading Integrated Solar Company</h3>
+      <p class="banner-subtitle">Get a free solar consultation — enter your mobile number</p>
+    </div>
+    <div class="cta-banner-form">
+      <input type="tel" id="mobile-banner" placeholder="Enter Mobile Number" maxlength="10">
+      <button onclick="submitMobileBanner()"><i class="fas fa-paper-plane"></i> Get Quote</button>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

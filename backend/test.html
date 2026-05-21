@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Stack Test</title>
+</head>
+<body>
+
+<h2>Simple Full Stack App</h2>
+
+<!-- INPUT -->
+<input id="msg" placeholder="Enter message">
+<button onclick="sendData()">Send</button>
+
+<br><br>
+
+<!-- LOAD BUTTON -->
+<button onclick="loadData()">Load Data</button>
+
+<h3>Data from Database:</h3>
+<ul id="list"></ul>
+
+<p id="result"></p>
+
+<script>
+const API = "http://localhost:5000";
+
+/* =========================
+   SEND DATA
+========================= */
+async function sendData() {
+  const message = document.getElementById("msg").value;
+
+  const res = await fetch(API + "/add", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message })
+  });
+
+  const data = await res.json();
+
+  document.getElementById("result").innerText = data.message;
+
+  loadData(); // auto refresh
+}
+
+/* =========================
+   LOAD DATA
+========================= */
+async function loadData() {
+  const res = await fetch(API + "/data");
+  const data = await res.json();
+
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+
+  data.data.forEach(item => {
+    const li = document.createElement("li");
+    li.innerText = item.message;
+    list.appendChild(li);
+  });
+}
+
+/* AUTO LOAD */
+loadData();
+</script>
+
+</body>
+</html>
