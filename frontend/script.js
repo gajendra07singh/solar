@@ -1,9 +1,9 @@
 console.log("Shri Solar Script Loaded v1.2");
 
-// Determine Backend URL based on environment
-const BACKEND_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === '')
-    ? 'http://localhost:5000'
-    : 'https://shrisolar-backend.onrender.com';
+// Determine Backend URL
+const BACKEND_URL = 'https://solar-raq8.onrender.com';
+
+console.log("Using Backend URL:", BACKEND_URL);
 
 const HEADER_HTML = `
 <!-- ===== TOPBAR ===== -->
@@ -61,9 +61,9 @@ const HEADER_HTML = `
         </div>
       </div>
       <div class="nav-link nav-dd">
-        Our Presence <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
+        Regional Offices <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
         <div class="nav-dd-menu">
-          <a href="our-presence.html">Sales Store & Branch Locator</a>
+          <a href="contact.html">Sales Store & Branch Locator</a>
         </div>
       </div>
       <a class="nav-link" href="certificates.html">Certificates & Awards</a>
@@ -77,6 +77,7 @@ const HEADER_HTML = `
         </div>
       </div>
     </div>
+    <button onclick="openLeadModal()" class="mobile-quote-btn">Get Free Quote</button>
     <button class="hamburger" id="ham" aria-label="Menu"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
@@ -180,28 +181,29 @@ const FOOTER_HTML = `
   <div class="modal-container">
     <button class="modal-close" onclick="closeLeadModal()"><i class="fas fa-times"></i></button>
     <div class="modal-header">
-      <div class="modal-icon-top"><i class="fas fa-clipboard-list"></i></div>
-      <h2><i class="fab fa-envira"></i> Quick Survey Form</h2>
+      <h2>Quick Survey Form</h2>
     </div>
     <div class="modal-body">
-      <div class="modal-form-group">
-        <label class="modal-label" for="name"><i class="fas fa-user"></i> Name</label>
-        <input type="text" id="name" class="modal-input" placeholder="Enter Your Name">
+      <div class="modal-form-grid">
+        <div class="modal-form-group">
+          <label class="modal-label" for="name">Name</label>
+          <input type="text" id="name" class="modal-input" placeholder="Name">
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-label" for="city">City</label>
+          <input type="text" id="city" class="modal-input" placeholder="City">
+        </div>
       </div>
       <div class="modal-form-group">
-        <label class="modal-label" for="city"><i class="fas fa-city"></i> City</label>
-        <input type="text" id="city" class="modal-input" placeholder="Enter Your City">
-      </div>
-      <div class="modal-form-group">
-        <label class="modal-label" for="phone"><i class="fas fa-phone-alt"></i> Mobile No</label>
+        <label class="modal-label" for="phone">Mobile No</label>
         <input type="tel" id="phone" class="modal-input" placeholder="Enter Mobile Number">
       </div>
 
       <button class="modal-btn modal-btn-submit" onclick="submitForm()">
-        <i class="fas fa-paper-plane"></i> Submit Now
+        Submit Now
       </button>
       <button class="modal-btn modal-btn-cancel" onclick="closeLeadModal()">
-        <i class="fas fa-times"></i> Cancel
+        Cancel
       </button>
     </div>
   </div>
@@ -210,6 +212,12 @@ const FOOTER_HTML = `
 
 function injectComponents() {
   console.log("Injecting Header and Footer...");
+
+  // Wake up backend (helpful for Render free tier)
+  fetch(BACKEND_URL)
+    .then(res => res.json())
+    .then(data => console.log("Backend status:", data.status))
+    .catch(err => console.warn("Backend wake-up ping failed."));
 
   const headerPlaceholder = document.getElementById('header-placeholder');
   if (headerPlaceholder) {
@@ -273,6 +281,33 @@ function initNav() {
       }
     };
   }
+
+  // Handle dropdowns on click for both mobile and desktop
+  const dropdowns = document.querySelectorAll('.nav-dd');
+  dropdowns.forEach(dd => {
+    dd.addEventListener('click', (e) => {
+      // If clicking on a link inside the dropdown, don't toggle (allow navigation)
+      if (e.target.tagName === 'A') return;
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isActive = dd.classList.contains('active');
+
+      // Close all other dropdowns
+      dropdowns.forEach(other => other.classList.remove('active'));
+
+      // Toggle current
+      if (!isActive) {
+        dd.classList.add('active');
+      }
+    });
+  });
+
+  // Close dropdowns if clicking outside
+  document.addEventListener('click', () => {
+    dropdowns.forEach(dd => dd.classList.remove('active'));
+  });
 }
 
 function highlightActiveLink() {

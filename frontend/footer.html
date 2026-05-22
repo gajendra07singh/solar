@@ -95,26 +95,28 @@
   <div class="modal-container">
     <button class="modal-close" onclick="closeLeadModal()"><i class="fas fa-times"></i></button>
     <div class="modal-header">
-      <h2><i class="fab fa-envira"></i> Quick Survey Form</h2>
+      <h2>Quick Survey Form</h2>
     </div>
     <div class="modal-body">
-      <div class="modal-form-group">
-        <label class="modal-label" for="name"><i class="fas fa-user"></i> Name</label>
-        <input type="text" id="name" class="modal-input" placeholder="Enter Your Name">
+      <div class="modal-form-grid">
+        <div class="modal-form-group">
+          <label class="modal-label" for="name">Name</label>
+          <input type="text" id="name" class="modal-input" placeholder="Name">
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-label" for="city">City</label>
+          <input type="text" id="city" class="modal-input" placeholder="City">
+        </div>
       </div>
       <div class="modal-form-group">
-        <label class="modal-label" for="city"><i class="fas fa-city"></i> City</label>
-        <input type="text" id="city" class="modal-input" placeholder="Enter Your City">
-      </div>
-      <div class="modal-form-group">
-        <label class="modal-label" for="phone"><i class="fas fa-phone-alt"></i> Mobile No</label>
+        <label class="modal-label" for="phone">Mobile No</label>
         <input type="tel" id="phone" class="modal-input" placeholder="Enter Mobile Number">
       </div>
       <button class="modal-btn modal-btn-submit" onclick="submitForm()">
-        <i class="fas fa-paper-plane"></i> Submit Now
+        Submit Now
       </button>
       <button class="modal-btn modal-btn-cancel" onclick="closeLeadModal()">
-        <i class="fas fa-times"></i> Cancel
+        Cancel
       </button>
     </div>
   </div>

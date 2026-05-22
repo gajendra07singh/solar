@@ -101,14 +101,25 @@
 
     /* Body Styling */
     .form-body {
-      padding: 25px;
+      padding: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 15px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-bottom: 20px;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
     }
 
     .label-with-icon {
@@ -209,37 +220,36 @@
     <button class="close-btn" onclick="window.close()"><i class="fas fa-times"></i></button>
 
     <div class="form-header">
-      <div class="header-icon">
-        <i class="fas fa-clipboard-list"></i>
-      </div>
-      <h2><i class="fab fa-envira"></i> Lead Form</h2>
+      <h2>Lead Form</h2>
     </div>
 
     <div class="form-body">
-      <!-- Name -->
-      <div class="form-group">
-        <label for="name" class="label-with-icon"><i class="fas fa-user"></i> Name</label>
-        <input type="text" id="name" placeholder="Enter Your Name">
-      </div>
+      <div class="form-grid">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name" class="label-with-icon">Name</label>
+          <input type="text" id="name" placeholder="Name">
+        </div>
 
-      <!-- City -->
-      <div class="form-group">
-        <label for="city" class="label-with-icon"><i class="fas fa-city"></i> City</label>
-        <input type="text" id="city" placeholder="Enter Your City">
+        <!-- City -->
+        <div class="form-group">
+          <label for="city" class="label-with-icon">City</label>
+          <input type="text" id="city" placeholder="City">
+        </div>
       </div>
 
       <!-- Mobile No -->
-      <div class="form-group">
-        <label for="phone" class="label-with-icon"><i class="fas fa-phone-alt"></i> Mobile No</label>
+      <div class="form-group full-width">
+        <label for="phone" class="label-with-icon">Mobile No</label>
         <input type="tel" id="phone" placeholder="Enter Mobile Number">
       </div>
 
       <div class="form-actions">
         <button class="btn btn-submit" onclick="submitForm()">
-          <i class="fas fa-paper-plane"></i> Submit
+          Submit
         </button>
         <button class="btn btn-cancel" onclick="window.close()">
-          <i class="fas fa-times"></i> Cancel
+          Cancel
         </button>
       </div>
     </div>
